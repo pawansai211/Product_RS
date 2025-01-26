@@ -56,11 +56,16 @@ REST_FRAMEWORK = {
 CSRF_COOKIE_NAME = "csrftoken"  # Django uses 'csrftoken' by default for CSRF cookie
 CORS_ALLOW_CREDENTIALS = True  # Allow credentials (cookies) to be sent
 CSRF_COOKIE_HTTPONLY = False
+CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Frontend URL (make sure this matches the frontend URL)
+    "https://psychic-palm-tree-67xqpvvv5r4hrjq4-3000.app.github.dev"
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  # Add your frontend origin here
+
+    "https://psychic-palm-tree-67xqpvvv5r4hrjq4-3000.app.github.dev"
 ]
 
 
