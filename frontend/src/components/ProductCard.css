@@ -1,0 +1,64 @@
+
+
+/* Main container for each product card */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px; /* You can adjust this based on your layout */
+  margin: 16px;
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the product image */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover; /* Ensures the image covers the space without distorting */
+}
+
+/* Style for the product title */
+.product-card h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* Style for the product description */
+.product-card p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Optional: Add a button or interaction section if needed */
+.product-card .interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card .interaction-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .interaction-buttons button:hover {
+  background-color: #0056b3;
+}
