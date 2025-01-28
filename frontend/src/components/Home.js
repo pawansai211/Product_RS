@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Home.css';
 import axios from 'axios';
 import UserProfile from './User';
 
@@ -72,10 +73,10 @@ const Home = () => {
       {loading ? (
         <p>Loading products...</p>
       ) : (
-        <div>
+        <div className="product-list">
           {products && products.length > 0 ? (
             products.map((product) => (
-              <div key={product.id} style={{ marginBottom: '20px' }}>
+              <div key={product.id} style={{ marginBottom: '20px' }} className="product-item">
                 <h3>{product.product_name} ({product.category})</h3>
                 <p>{product.description}</p>
                 <img
@@ -91,7 +92,7 @@ const Home = () => {
               </div>
             ))
           ) : (
-            <p>No products found.</p>
+            <p className="no-products">No products found.</p>
           )}
         </div>
       )}
