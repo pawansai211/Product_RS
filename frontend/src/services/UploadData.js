@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './UploadData.css';	
 import axios from 'axios';
 
 const ProductUploadForm = () => {
@@ -47,10 +48,9 @@ const ProductUploadForm = () => {
   };
 
   return (
-    <div>
+    <div className="upload-container">
       <h2>Upload Product</h2>
       <form onSubmit={handleSubmit}>
-        
         <div>
           <label>Product Type:</label>
           <select
@@ -91,7 +91,6 @@ const ProductUploadForm = () => {
             required
           />
         </div>
-        
         <div>
           <label>Image:</label>
           <input type="file" name="image" onChange={handleFileChange} required />
