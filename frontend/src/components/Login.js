@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
 
@@ -22,8 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="login">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
