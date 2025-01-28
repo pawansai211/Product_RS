@@ -199,36 +199,44 @@ class ProductRecommendationView(APIView):
             raise NotFound("User not found or not authorized to access this resource.")
 
         # Call the recommendation function with the current user
-        recommended_product_indices = recommend_products_cb(request.user)
+        recommended_products = recommend_products_cb(request.user)
 
-        # Get the recommended products based on the indices returned
-        recommended_products = Product.objects.filter(id__in=recommended_product_indices)
+        if not recommended_products:
+            return Response({"message": "No recommendations available."}, status=200)
 
-        # Serialize the products
-        serializer = ProductSerializer(recommended_products, many=True)
-
-        # Return the response with the serialized data
-        return Response(serializer.data)
+        # Serialize the recommended products to return as response
+        product_data = ProductSerializer(recommended_products, many=True).data
+        return Response(product_data)
 class UserProfileView(APIView):
     authentication_classes = [TokenAuthentication]  # Ensure the user is authenticated via token
     permission_classes = [IsAuthenticated]  # Only authenticated users can access their profile
 
     def get(self, request):
         user = request.user  # The authenticated user from the token
-        
+
         # Manually prepare user data
         user_data = {
             "username": user.username,
             "email": user.email,
         }
-        
+
         # Fetch related preferences for the user
         preferences = UserPreferences.objects.filter(user=user)
-        
-        # Serialize the user preferences using the UserPreferencesSerializer
         preferences_data = UserPreferencesSerializer(preferences, many=True).data
-        
-        # Add the preferences data to the user_data dictionary
+
+        # Fetch user interactions with products
+        interactions = Interaction.objects.filter(user=user)
+        interaction_data = []
+        for interaction in interactions:
+            interaction_data.append({
+                'product_name': interaction.product.product_name,
+                'description': interaction.product.description,
+                'interaction_type': interaction.interaction_type,
+                'interaction_count': interaction.interaction_count,
+            })
+
+        # Add the preferences and interaction data to the user_data dictionary
         user_data['preferences'] = preferences_data
-        
+        user_data['interactions'] = interaction_data
+
         return Response(user_data)
