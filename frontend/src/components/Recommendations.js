@@ -1,4 +1,4 @@
-// Recommendations.js
+import './Recommendations.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCard';
@@ -72,27 +72,27 @@ const Recommendations = () => {
   }
 
   return (
-    <div>
-      <h2>Recommended Products</h2>
+    <div className="recommendations-container">
+    <h2>Recommended Products</h2>
 
-      {error && <p>{error}</p>}
+    {error && <p className="loading-error">{error}</p>}
 
-      {recommendedProducts && recommendedProducts.length > 0 ? (
-        <div>
-          {recommendedProducts.map((product) => (
-            <div key={product.id} style={{ marginBottom: '20px' }}>
-              <ProductCard product={product} />
-              <div>
-                <button onClick={() => handleInteraction(product.id, 'like')}>Like</button>
-                <button onClick={() => handleInteraction(product.id, 'dislike')}>Dislike</button>
-              </div>
+    {recommendedProducts && recommendedProducts.length > 0 ? (
+      <div className="product-list">
+        {recommendedProducts.map((product) => (
+          <div key={product.id} className="product-card-container">
+            <ProductCard product={product} />
+            <div className="interaction-buttons">
+              <button onClick={() => handleInteraction(product.id, 'like')}>Like</button>
+              <button onClick={() => handleInteraction(product.id, 'dislike')}>Dislike</button>
             </div>
-          ))}
-        </div>
-      ) : (
-        <p>No recommended products available.</p>
-      )}
-    </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p className="no-products">No recommended products available.</p>
+    )}
+  </div>
   );
 };
 
