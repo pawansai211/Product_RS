@@ -1,0 +1,100 @@
+/* General Reset for Consistent Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the Upload Form - Scoped to .upload-container */
+  .upload-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-container h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling - Scoped to .upload-container */
+  .upload-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Label Styling - Scoped to .upload-container */
+  .upload-container label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Input and Select Styling - Scoped to .upload-container */
+  .upload-container select, 
+  .upload-container input[type="file"], 
+  .upload-container textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+  }
+  
+  .upload-container select:focus, 
+  .upload-container input[type="file"]:focus, 
+  .upload-container textarea:focus {
+    border-color: #4CAF50;
+  }
+  
+  .upload-container textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Submit Button Styling - Scoped to .upload-container */
+  .upload-container button {
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .upload-container button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Empty State for Error Messages or Success Messages - Scoped to .upload-container */
+  .upload-container p {
+    font-size: 1rem;
+    color: #f44336;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 480px) {
+    .upload-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .upload-container button {
+      font-size: 1rem;
+    }
+  }
+  
