@@ -1,5 +1,6 @@
 // Signup.js
 import React, { useState } from 'react';
+import './Signup.css';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../services/api';
 
@@ -24,7 +25,8 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
+      <div className="signup-box">
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -48,6 +50,7 @@ const Signup = () => {
         {error && <p>{error}</p>}
         <button type="submit">Sign Up</button>
       </form>
+    </div>
     </div>
   );
 };
