@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  /* Loading */
+  p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* Product List Container */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Product Item */
+  .product-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Product Image */
+  .product-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Product Description */
+  .product-item p {
+    font-size: 1rem;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  /* Buttons (Like/Dislike) */
+  .product-item button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-item button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Dislike Button */
+  .product-item button:nth-child(2) {
+    background-color: #f44336;
+  }
+  
+  .product-item button:nth-child(2):hover {
+    background-color: #e53935;
+  }
+  
+  /* Empty State */
+  .no-products {
+    font-size: 1.2rem;
+    color: #999;
+    text-align: center;
+  }
+  

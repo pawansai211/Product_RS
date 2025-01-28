@@ -1,0 +1,93 @@
+/* Only apply these styles to elements inside .signup-container */
+
+/* Signup Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  /* Signup Box */
+  .signup-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading */
+  .signup-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .signup-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input Fields */
+  .signup-box input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  
+  .signup-box input:focus {
+    border-color: #4CAF50;  /* Highlight border on focus */
+  }
+  
+  /* Error Message */
+  .signup-box p {
+    color: #f44336;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Button */
+  .signup-box button {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-box button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .signup-box {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .signup-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    .signup-box input {
+      font-size: 0.9rem;
+    }
+  
+    .signup-box button {
+      font-size: 0.9rem;
+    }
+  }
+  

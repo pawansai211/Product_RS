@@ -1,0 +1,78 @@
+/* Profile Container */
+body {
+    background-color: aqua;
+}
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Profile Info */
+  .profile-info {
+    margin-bottom: 20px;
+  }
+  
+  .profile-info p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Table Styling for Interactions */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f9;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  table td {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Loading/Error State */
+  .loading-error {
+    text-align: center;
+    color: #f44336;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  /* Empty State for Interactions */
+  .no-interactions {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+  }
+  

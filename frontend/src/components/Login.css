@@ -1,0 +1,90 @@
+/* General Reset - Keep this part as is */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Only apply these styles when the class .login is present */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #614481;
+}
+
+.login div {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.login input:focus {
+  border-color: #4CAF50;
+}
+
+.login p {
+  color: #f44336;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.login button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 480px) {
+  .login div {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login h2 {
+    font-size: 1.5rem;
+  }
+
+  .login input {
+    font-size: 0.9rem;
+  }
+
+  .login button {
+    font-size: 0.9rem;
+  }
+}
